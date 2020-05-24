@@ -72,6 +72,7 @@ fn main() {
         println!("Error: invalid arguments.");
         println!("The first argument selects the multiplication method. 1 - standard, 2 - Strassen.");
         println!("The second argument selects the order of matrices.");
+        println!("Example: program_name.exe 1 256");
         return;
     }
     mode = args[1].parse::<usize>().unwrap();
@@ -95,7 +96,7 @@ fn main() {
             println!("Size: {}\nTime: {}", size, result);
         },
         _ => {
-            println!("Incorrect mode specified.");
+            println!("Invalid mode specified.");
             return;
         }
     }
